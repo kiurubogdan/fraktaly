@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Геометрические фракталы</title>
+    <style>
+        figure {
+            float: right;
+            margin: 5px;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <div class="dropdown">
+            <button class="dropbtn" style="background-color: red;">Вездесущие Фракталы</button>
+            <div class="dropdown-content">
+                <a href="fractal-geometry.html">Геометрические фракталы</a>
+                <a href="fractal-algebra.html">Алгебраические фракталы</a>
+                <a href="fractal-nature.html">Стохастичексие фракталы</a>
+                <a href="fractal-use.html">Применение фракталов</a>
+                <a href="fractal-architect.html">Фракталы в архитектуре</a>
+            </div>
+        </div>
+        <div class="dropdown" id="fr">
+            <button class="dropbtn">Программирование Фракталов</button>
+            <div class="dropdown-content">
+                <a href="tree.html">Дерево Пифагора</a>
+                <a href="triangle.html">Треугольник Серпинского</a>
+                <a href="snowflake.html">Снежинка Коха</a>
+                <a href="drakon.html">Фрактал Дракона</a>
+                <a href="newton-swimpool.html">Бассейны Ньютона</a>
+                <a href="julia.html">Множество Жулиа</a>
+                <a href="mandelbrot.html">Множество Мандельброта</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <p>
+        <figure>
+            <img src="img/triangle.gif">
+            <figcaption>
+                Фрактал "Треугольник Серпинского" в 3D
+            </figcaption>
+        </figure>
+        <h2>Геометрические фракталы</h2>
+        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;Именно с них и начиналась история фракталов. Этот тип фракталов получается путем простых геометрических построений. Обычно при построении этих фракталов поступают так: берется "затравка" - аксиома - набор отрезков, на основании которых будет строиться фрактал. Далее к этой "затравке" применяют набор правил, который преобразует ее в какую-либо геометрическую фигуру. Далее к каждой части этой фигуры применяют опять тот же набор правил. С каждым шагом фигура будет становиться все сложнее и сложнее, и если мы проведем (по крайней мере, в уме) бесконечное количество преобразований - получим геометрический фрактал.<br>
+        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;В машинной графике использование геометрических фракталов необходимо при получении изображений деревьев, кустов, береговой линии. Двухмерные геометрические фракталы используются для создания объемных текстур (рисунка на поверхности обьекта)<br>
+        <h2>Примеры геометрических фракталов:</h2>
+        <div class="cards">
+            <div class="card">
+                <h3><a href="snowflake.html" class="link">Снежинка Коха</a></h3>
+                <a href="img/koh.png" target="_blank"><img src="img/koh.png" width="182" height="200" style="float: left; margin-right: 10px;" class="focus-img" title="Открыть в новой вкладке"></a>
+                Изобретена в 1904 году немецким математиком Хельге фон Кохом.<br>
+                Для её построения берется единичный отрезок, делится на три равные части и среднее звено заменяется равносторонним треугольником без этого звена. На следующем шаге повторяем операцию для каждого из четырёх получившихся отрезков. В результате бесконечного повторения данной процедуры получается фрактальная кривая.<br><br><br>
+            </div>
+            <div class="card">
+                <h3><a href="triangle.html" class="link">Салфетка (треугольник) Серпинского</a></h3>
+                <a href="img/SierpinskiTriangle.png" target="_blank"><img src="img/SierpinskiTriangle.png" width="182" height="200" style="float: left; margin-right: 10px;" class="focus-img" title="Открыть в новой вкладке"></a>
+                В 1915 году польский математик Вацлав Серпинский придумал занимательный объект.
+                Для его построения берётся сплошной равносторонний треугольник. На первом шаге из центра удаляется перевернутый равносторонний треугольник. На втором шаге удаляется три перевернутых треугольника из трёх оставшихся треугольников и т.д
+                <br><br><br>
+            </div>
+            <div class="card">
+                <h3><a href="drakon.html" class="link">Кривая Дракона</a></h3>
+                <a href="img/Harter-Heighway.gif" target="_blank"><img src="img/Harter-Heighway.gif" width="182" height="200" style="float: left; margin-right: 10px;" class="focus-img" title="Открыть в новой вкладке"></a>
+                Кривая дракона — это кривая без самопересечений, которая определяется рекурсивно. Описать эту кривую можно, задавая поворот налево цифрой 1, а поворот направо — цифрой 0. Важно, что все повороты совершаются на один и тот же угол! Таким образом, задавая значение 1 или 0 на каждом шаге, мы можем задать кривую.
+                <br><br><br>
+            </div>
+            <div class="card">
+                <h3><a href="tree.html" class="link">Дерево Пифагора</a></h3>
+                <a href="img/derevo.jpg" target="_blank"><img src="img/derevo.jpg" width="182" height="200" style="float: left; margin-right: 10px;" class="focus-img" title="Открыть в новой вкладке"></a>
+                Берется квадрат, разбивается на девять равных квадратов , средний из которых выбрасывается, а с остальными повторяется та же операция до бесконечности
+            </div>
+            <div class="card">
+                <h3>Пятиугольник Дюрера</h3>
+                <a href="img/durer2.png" target="_blank"><img src="img/durer2.png" width="182" height="200" style="float: left; margin-right: 10px;" class="focus-img" title="Открыть в новой вкладке"></a>
+                Фрактал выглядит как связка пятиугольников, сжатых вместе. Фактически он образован при использовании пятиугольника в качестве инициатора и равнобедренных треугольников, отношение большей стороны к меньшей в которых в точности равно так называемой золотой пропорции Эти треугольники вырезаются из середины каждого пятиугольника, в результате чего получается фигура, похожая на 5 маленьких пятиугольников, приклеенных к одному большому.
+                <br><br><br>
+            </div>
+            <div class="card">
+                <h3>Ковер Серпинского</h3>
+                <a href="img/Sierpinski6_kover.png" target="_blank"><img src="img/Sierpinski6_kover.png" width="182" height="200" style="float: left; margin-right: 10px;" class="focus-img" title="Открыть в новой вкладке"></a>
+                Берется квадрат, разбивается на девять равных квадратов , средний из которых выбрасывается, а с остальными повторяется та же операция до бесконечности
+            </div>
+        </div>
+    </main>
+</body>
+</html>

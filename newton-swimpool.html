@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>Бассейны Ньютона</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <div class="dropdown">
+            <button class="dropbtn">Вездесущие Фракталы</button>
+            <div class="dropdown-content">
+                <a href="fractal-geometry.html">Геометрические фракталы</a>
+                <a href="fractal-algebra.html">Алгебраические фракталы</a>
+                <a href="fractal-nature.html">Стохастичексие фракталы</a>
+                <a href="fractal-use.html">Применение фракталов</a>
+                <a href="fractal-architect.html">Фракталы в архитектуре</a>
+            </div>
+        </div>
+        <div class="dropdown" id="fr">
+            <button class="dropbtn" class="active" style="background-color: red;">Программирование Фракталов</button>
+            <div class="dropdown-content">
+                <a href="tree.html">Дерево Пифагора</a>
+                <a href="triangle.html">Треугольник Серпинского</a>
+                <a href="snowflake.html">Снежинка Коха</a>
+                <a href="drakon.html">Фрактал Дракона</a>
+                <a href="newton-swimpool.html">Бассейны Ньютона</a>
+                <a href="julia.html">Множество Жулиа</a>
+                <a href="mandelbrot.html">Множество Мандельброта</a>
+            </div>
+        </div>
+    </div>
+</head>
+<canvas width="500" height="500" id="canvas"></canvas>
+<div class="info" style="width: calc(var(--body) - 550px - 20px);">
+    Еще один тип динамических фракталов составляют фракталы (так называемые бассейны) Ньютона.<br>
+    <p>Формулы для их построения основаны на методе решения нелинейных уравнений, который был придуман великим математиком еще в XVII веке. Применяя общую формулу метода Ньютона <i style="font-weight: 700;">z<sub>n+1</sub> = z<sub>n</sub> – f(z<sub>n</sub>)/f'(z<sub>n</sub>)</i>, n = 0, 1, 2, ... для решения уравнения <i style="font-weight: 700;">f(z) = 0</i> к многочлену <i style="font-weight: 700;">z<sup>k</sup> – a</i>, получим последовательность точек: <i style="font-weight: 700;">z<sub>n+1</sub> = ((k – 1)z<sub>n</sub><sup>k</sup> – a)/kz<sub>n</sub><sup>k–1</sup></i>, n = 0, 1, 2, ... . Выбирая в качестве начальных приближений различные комплексные числа <i style="font-weight: 700;">z<sub>0</sub></i>, будем получать последовательности, которые сходятся к корням этого многочлена. Поскольку корней у него ровно k, то вся плоскость разбивается на k частей — областей притяжения корней. Границы этих частей имеют фрактальную структуру. (Заметим в скобках, что если в последней формуле подставить k = 2, а в качестве начального приближения взять <i style="font-weight: 700;">z<sub>0</sub> = a</i>, то получится формула, которую реально используют для вычисления квадратного корня из a в компьютерах.) Наш фрактал получается из многочлена <i style="font-weight: 700;">f(z) = z<sup>3</sup> – 1.</i></p>
+    <br><br>
+</div>
+<div style="margin: 10px;">
+    <input type="range" min="-20000" max="20000" id="coef" value="-375"> (Коэффициент)
+</div><br>
+<a class="btn" href="js/newton.js">Показать код</a>
+<script src="js/newton.js"></script>
+
+</html>

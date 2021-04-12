@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Снежинка Коха</title>
+</head>
+<div class="navbar">
+    <a href="index.html">Главная</a>
+    <div class="dropdown">
+        <button class="dropbtn">Вездесущие Фракталы</button>
+        <div class="dropdown-content">
+            <a href="fractal-geometry.html">Геометрические фракталы</a>
+            <a href="fractal-algebra.html">Алгебраические фракталы</a>
+            <a href="fractal-nature.html">Стохастичексие фракталы</a>
+            <a href="fractal-use.html">Применение фракталов</a>
+            <a href="fractal-architect.html">Фракталы в архитектуре</a>
+        </div>
+    </div>
+    <div class="dropdown" id="fr">
+        <button class="dropbtn" class="active" style="background-color: red;">Программирование Фракталов</button>
+        <div class="dropdown-content">
+            <a href="tree.html">Дерево Пифагора</a>
+            <a href="triangle.html">Треугольник Серпинского</a>
+            <a href="snowflake.html">Снежинка Коха</a>
+            <a href="drakon.html">Фрактал Дракона</a>
+            <a href="newton-swimpool.html">Бассейны Ньютона</a>
+            <a href="julia.html">Множество Жулиа</a>
+            <a href="mandelbrot.html">Множество Мандельброта</a>
+        </div>
+    </div>
+</div>
+<p class="info">
+    <b style="font-size: 24px;">Снежинка Коха</b><br>
+    Эта фигура — один из первых исследованных учеными фракталов. Она получается из трех копий кривой Коха, которая впервые появилась в статье шведского математика Хельге фон Коха в 1904 году. Эта кривая была придумана как пример непрерывной линии, к которой нельзя провести касательную ни в одной точке. Линии с таким свойством были известны и раньше (Карл Вейерштрасс построил свой пример еще в 1872 году), но кривая Коха замечательна простотой своей конструкции. Не случайно его статья называется «О непрерывной кривой без касательных, которая возникает из элементарной геометрии».<br><img src="img/koch_iter1.gif"><br>Рисунок и анимация отлично показывают, как по шагам строится кривая Коха. Первая итерация — просто начальный отрезок. Потом он делится на три равные части, центральная достраивается до правильного треугольника и затем выкидывается. Получается вторая итерация — ломаная линия, состоящая из четырех отрезков. К каждому из них применяется такая же операция, и получается четвертый шаг построения. Продолжая в том же духе, можно получать всё новые и новые линии (все они будут ломаными). А то, что получится в пределе (это уже будет воображаемый объект), и называется кривой Коха.
+</p>
+<canvas id="canvas" width="800" height="500" style="border: none;"></canvas>
+<a href="js/snowflake.js" target="_blank" class="btn">Показать код</a>
+<script src="js/snowflake.js"></script>
+
+</html>

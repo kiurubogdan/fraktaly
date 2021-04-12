@@ -1,0 +1,167 @@
+:root {
+    --body: 100%;
+    --canvas: 600px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("../img/background.jpg");
+    font-size: 20px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: lightseagreen;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#fr a:nth-child(5) {
+    border-top: 2px solid #000;
+}
+
+main {
+    padding-top: 5px;
+    padding: 10px;
+}
+
+canvas {
+    margin: 10px;
+    border: 1px solid #000;
+    display: block;
+}
+
+.info {
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    width: calc(var(--body) - var(--canvas) - 70px);
+    word-break: break-all;
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.active {
+    background-color: red;
+}
+
+button.active {
+    background-color: red;
+}
+
+.btn {
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    height: 50px;
+    width: auto;
+    font-size: 30px;
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, red, purple);
+    color: #fff;
+}
+
+a.btn {
+    text-decoration: none;
+    padding: 8px;
+    font-size: 30px;
+    background-image: linear-gradient(to right, purple, red);
+}
+
+figure {
+    float: right;
+    margin: 5px;
+    max-width: 30%;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+blockquote {
+    text-align: right;
+    font-style: italic;
+}
+
+figure p {
+    text-align: justify;
+}
+
+.img {
+    display: flex;
+}
+
+.flex {
+    display: inline-block;
+}
+
+.flex b {
+    text-align: left;
+}
+
+.flex p {
+    display: block;
+    text-align: justify;
+    width: auto;
+
+}

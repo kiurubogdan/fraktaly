@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Стохастические фракталы</title>
+    <style>
+        figure {
+            float: right;
+            margin: 5px;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <div class="dropdown" style="background-color: red;">
+            <button class="dropbtn">Вездесущие Фракталы</button>
+            <div class="dropdown-content">
+                <a href="fractal-geometry.html">Геометрические фракталы</a>
+                <a href="fractal-algebra.html">Алгебраические фракталы</a>
+                <a href="fractal-nature.html">Стохастичексие фракталы</a>
+                <a href="fractal-use.html">Применение фракталов</a>
+                <a href="fractal-architect.html">Фракталы в архитектуре</a>
+            </div>
+        </div>
+        <div class="dropdown" id="fr">
+            <button class="dropbtn">Программирование Фракталов</button>
+            <div class="dropdown-content">
+                <a href="tree.html">Дерево Пифагора</a>
+                <a href="triangle.html">Треугольник Серпинского</a>
+                <a href="snowflake.html">Снежинка Коха</a>
+                <a href="drakon.html">Фрактал Дракона</a>
+                <a href="newton-swimpool.html">Бассейны Ньютона</a>
+                <a href="julia.html">Множество Жулиа</a>
+                <a href="mandelbrot.html">Множество Мандельброта</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <p>
+        <h2>Стохастические фракталы</h2>
+        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;Еще одним известным классом фракталов являются стохастические фракталы, которые получаются в том случае, если в итерационном процессе случайным образом менять какие-либо его параметры. При этом получаются объекты очень похожие на природные - несимметричные деревья, изрезанные береговые линии и т.д. Двумерные стохастические фракталы используются при моделировании рельефа местности и поверхности моря <br>
+        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;Типичный представитель данного класса фракталов "Плазма". Для ее построения возьмем прямоугольник и для каждого его угла определим цвет. Далее находим центральную точку прямоугольника и раскрашиваем ее в цвет равный среднему арифметическому цветов по углам прямоугольника плюс некоторое случайное число. Чем больше случайное число - тем более "рваным" будет рисунок. Если мы теперь скажем, что цвет точки это высота над уровнем моря - получим вместо плазмы - горный массив. Именно на этом принципе моделируются горы в большинстве программ. С помощью алгоритма, похожего на плазму строится карта высот, к ней применяются различные фильтры, накладываем текстуру и пожалуйста фотореалистичные горы готовы. <br>
+        <div>
+            <h3>Плазма</h3>
+            <a href="img/plazma.jpg" target="_blank"><img src="img/plazma.jpg" style="float: left; margin-right: 10px;" title="Открыть в новой вкладке"></a>
+        </div>
+        </p>
+    </main>
+</body>
+
+</html>

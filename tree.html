@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ru">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Дерево Пифагора</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" class="active">Главная</a>
+        <div class="dropdown">
+            <button class="dropbtn">Вездесущие Фракталы</button>
+            <div class="dropdown-content">
+                <a href="fractal-geometry.html">Геометрические фракталы</a>
+                <a href="fractal-algebra.html">Алгебраические фракталы</a>
+                <a href="fractal-nature.html">Стохастичексие фракталы</a>
+                <a href="fractal-use.html">Применение фракталов</a>
+                <a href="fractal-architect.html">Фракталы в архитектуре</a>
+            </div>
+        </div>
+        <div class="dropdown" id="fr">
+            <button class="dropbtn">Программирование Фракталов</button>
+            <div class="dropdown-content">
+                <a href="tree.html">Дерево Пифагора</a>
+                <a href="triangle.html">Треугольник Серпинского</a>
+                <a href="snowflake.html">Снежинка Коха</a>
+                <a href="drakon.html">Фрактал Дракона</a>
+                <a href="newton-swimpool.html">Бассейны Ньютона</a>
+                <a href="julia.html">Множество Жулиа</a>
+                <a href="mandelbrot.html">Множество Мандельброта</a>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas" width="800" height="500" style="background-color: transparent">
+        Извините, ваш браузер не поддерживает тег canvas
+    </canvas>
+    <div class="info">
+        <b>Дерево Пифагора</b> — разновидность фрактала, основанная на фигуре, известной как «Пифагоровы штаны».
+        <p>Пифагор, доказывая свою знаменитую теорему, построил фигуру, где на сторонах прямоугольного треугольника расположены квадраты. В наш век эта фигура Пифагора выросла в целое дерево. Впервые дерево Пифагора построил А. Е. Босман (1891—1961) во время второй мировой войны, используя обычную чертёжную линейку.</p>
+        <p>Одним из свойств дерева Пифагора является то, что если площадь первого квадрата равна единице, то на каждом уровне сумма площадей квадратов тоже будет равна единице.</p>
+        <p>Если в классическом дереве Пифагора угол равен 45 градусам, то также можно построить и обобщённое дерево Пифагора при использовании других углов. Такое дерево часто называют обдуваемое ветром дерево Пифагора. Если изображать только отрезки, соединяющие каким-либо образом выбранные «центры» треугольников, то получается обнаженное дерево Пифагора.</p>
+
+        <b>Алгоритм:</b>
+        <ol>
+            <li>Строим вертикальный отрезок</li>
+            <li>Из верхнего конца этого отрезка рекурсивно строим еще 2 отрезка под определенными углами</li>
+            <li>Вызываем функцию построения двух последующих отрезков для каждой ветви дерева</li>
+        </ol>
+    </div>
+    <div style="margin: 10px; margin-bottom: 15px;">
+        Кол-во итераций: 1 <input type="range" min="1" max="14" id="range" onchange="initialize()" value="9"> 14<br>
+        Угол разворота ветвей: 0 <input type="range" min="0" max="90" id="angle" onchange="initialize()" value="30"> 90
+    </div>
+    <script src="js/tree.js"></script>
+    <a href="js/tree.js" target="_blank" class="btn">Показать код</a>
+    <a href="tree2.html" target="_blank" class="btn">Дерево пифагора (v.1.2)</a>
+</body>
+
+</html>
+7

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Множество Мандельброта</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <div class="dropdown">
+            <button class="dropbtn">Вездесущие Фракталы</button>
+            <div class="dropdown-content">
+                <a href="fractal-geometry.html">Геометрические фракталы</a>
+                <a href="fractal-algebra.html">Алгебраические фракталы</a>
+                <a href="fractal-nature.html">Стохастичексие фракталы</a>
+                <a href="fractal-use.html">Применение фракталов</a>
+                <a href="fractal-architect.html">Фракталы в архитектуре</a>
+            </div>
+        </div>
+        <div class="dropdown" id="fr">
+            <button class="dropbtn" style="background-color: red">Программирование Фракталов</button>
+            <div class="dropdown-content">
+                <a href="tree.html">Дерево Пифагора</a>
+                <a href="triangle.html">Треугольник Серпинского</a>
+                <a href="snowflake.html">Снежинка Коха</a>
+                <a href="drakon.html">Фрактал Дракона</a>
+                <a href="newton-swimpool.html">Бассейны Ньютона</a>
+                <a href="julia.html">Множество Жулиа</a>
+                <a href="mandelbrot.html">Множество Мандельброта</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <canvas id="viewport" width="640" height="480"></canvas>
+    <div class="info" style="width: calc(var(--body) - 700px);">
+        <b>Множество Мандельброта</b> — это множество точек c на комплексной плоскости, для которых последовательность zn, определяемая итерациями <i>z<sub>0</sub> = 0, z<sub>1</sub> = z<sub>0</sub><sup>2</sup> + с</i>, ..., <i>z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c</i>, конечна (то есть не уходит в бесконечность). Визуально множество Мандельброта выглядит как набор бесконечного количества различных фигур, самая большая из которых называется кардиоидой (она похожа на стилизованное изображение сердца и получила свое название от двух греческих слов — «сердце» и «вид»). Кардиоида окружена всё уменьшающимися кругами, каждый из которых окружен еще меньшими кругами, и т. д. до бесконечности. При любом увеличении этого фрактала будут выявляться всё более и более мелкие детали изображения, дополнительные ветки с более мелкими кардиоидами, кругами. И этот процесс можно продолжать бесконечно.
+    </div><br>
+    <div style="margin: 10px;">
+        Кол-во итераций: 1<input type="range" id="range" min="1" max="3000" value="1000" onchange="initialize()">3000
+    </div><br>
+    <a class="btn" href="js/mandelbrot.js">Показать код</a>
+    <a class="btn" href="mandelbrot2.html">Множество Мандельброта (v. 1.2)</a>
+    <script src="js/mandelbrot.js"></script>
+</body>
+</html>

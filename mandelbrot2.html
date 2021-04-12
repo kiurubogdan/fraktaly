@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Множество Мандельброта</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" class="active">Главная</a>
+        <div class="dropdown">
+            <button class="dropbtn">Вездесущие Фракталы</button>
+            <div class="dropdown-content">
+                <a href="fractal-geometry.html">Геометрические фракталы</a>
+                <a href="fractal-algebra.html">Алгебраические фракталы</a>
+                <a href="fractal-nature.html">Стохастичексие фракталы</a>
+                <a href="fractal-use.html">Применение фракталов</a>
+                <a href="fractal-architect.html">Фракталы в архитектуре</a>
+            </div>
+        </div>
+        <div class="dropdown" id="fr">
+            <button class="dropbtn">Программирование Фракталов</button>
+            <div class="dropdown-content">
+                <a href="tree.html">Дерево Пифагора</a>
+                <a href="triangle.html">Треугольник Серпинского</a>
+                <a href="snowflake.html">Снежинка Коха</a>
+                <a href="drakon.html">Фрактал Дракона</a>
+                <a href="newton-swimpool.html">Бассейны Ньютона</a>
+                <a href="julia.html">Множество Жулиа</a>
+                <a href="mandelbrot.html">Множество Мандельброта</a>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas" height="512" width="512"></canvas>
+    <div style="margin: 10px; width: calc(var(--body) - 572px); float: right;">
+        Цвет фона:<br>
+        <input type="range" id="r" min="0" max="255" onchange="init()">R<br>
+        <input type="range" id="g" min="0" max="255" onchange="init()">G<br>
+        <input type="range" id="b" min="0" max="255" onchange="init()">B<br><br>
+    </div>
+    <a class="btn" href="js/mandelbrot2.js">Показать код</a>
+</body>
+<script src="js/mandelbrot2.js"></script>
+
+</html>

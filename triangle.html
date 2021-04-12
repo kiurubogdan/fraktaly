@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Треугольник Серпинского</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <div class="dropdown">
+            <button class="dropbtn">Вездесущие Фракталы</button>
+            <div class="dropdown-content">
+                <a href="fractal-geometry.html">Геометрические фракталы</a>
+                <a href="fractal-algebra.html">Алгебраические фракталы</a>
+                <a href="fractal-nature.html">Стохастичексие фракталы</a>
+                <a href="fractal-use.html">Применение фракталов</a>
+                <a href="fractal-architect.html">Фракталы в архитектуре</a>
+            </div>
+        </div>
+        <div class="dropdown" id="fr">
+            <button class="dropbtn" class="active" style="background-color: red;">Программирование Фракталов</button>
+            <div class="dropdown-content">
+                <a href="tree.html">Дерево Пифагора</a>
+                <a href="triangle.html">Треугольник Серпинского</a>
+                <a href="snowflake.html">Снежинка Коха</a>
+                <a href="drakon.html">Фрактал Дракона</a>
+                <a href="newton-swimpool.html">Бассейны Ньютона</a>
+                <a href="julia.html">Множество Жулиа</a>
+                <a href="mandelbrot.html">Множество Мандельброта</a>
+            </div>
+        </div>
+    </div>
+    <p class="info">
+        <b style="font-size: 24px;">Треугольник Серпинского</b><br>
+        Этот фрактал описал в 1915 году польский математик Вацлав Серпинский. Чтобы его получить, нужно взять (равносторонний) треугольник с внутренностью, провести в нём средние линии и выкинуть центральный из четырех образовавшихся маленьких треугольников. Дальше эти же действия нужно повторить с каждым из оставшихся трех треугольников, и т. д. На рисунке показаны первые три шага, а на JavaScript-демонстрации вы можете потренироваться и получить шаги вплоть до десятого.<br><img src="img/sierpinski_iter.gif"><br>Выкидывание центральных треугольников — не единственный способ получить в итоге треугольник Серпинского. Можно двигаться «в обратном направлении»: взять изначально «пустой» треугольник, затем достроить в нём треугольник, образованный средними линиями, затем в каждом из трех угловых треугольников сделать то же самое, и т. д. Поначалу фигуры будут сильно отличаться, но с ростом номера итерации они будут всё больше походить друг на друга, а в пределе совпадут.<br><img src="img/sierpinski_iter2.gif"><br>Следующий способ получить треугольник Серпинского еще больше похож на обычную схему построения геометрических фракталов с помощью замены частей очередной итерации на масштабированный фрагмент. Здесь на каждом шаге составляющие ломаную отрезки заменяются на ломаную из трех звеньев (она сама получается в первой итерации). Откладывать эту ломаную нужно попеременно то вправо, то влево. Видно, что уже восьмая итерация очень близка к фракталу, и чем дальше, тем ближе будет подбираться к нему линия.<br><img src="img/sierpinski_iter3.gif" height="200" width="400">
+    </p>
+    <canvas id="myCanvas" width="800" height="500"></canvas>
+    <div style="margin: 10px;">
+        Кол-во итераций: 1 <input type="range" min="0" max="9" id="range" onchange="init()"> 10<br>
+    </div>
+    <button onclick="btndraw();" class="btn">Смена цвета</button>
+    <a href="js/triangle.js" target="_blank" class="btn">Показать код</a>
+    <script src="js/triangle.js"></script>
+</body>
+
+</html>
